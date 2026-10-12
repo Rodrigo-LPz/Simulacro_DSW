@@ -1,4 +1,0 @@
-- Primera función:
-    php toolbox.php saludar
-
-- 
