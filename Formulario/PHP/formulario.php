@@ -13,7 +13,7 @@
     // Comprueba si un texto contiene únicamente letras (incluidas las acentuadas, la "ñ" y la "ü") y espacios.
     function soloLetras(string $texto): bool{
         // Caracteres permitidos (solo en minúscula: el texto se pasa a minúsculas antes de comprobarlo).
-        $permitidos = "abcdefghijklmnñopqrstuvwxyzáéíóúü ";
+        $permitidos = "aábcdeéfghiíjklmnñoópqrstuúüvwxyz ";
 
         //$texto = mb_strtolower($texto);
 
