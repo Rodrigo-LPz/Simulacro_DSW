@@ -1,0 +1,21 @@
+- Primera función:
+    php toolbox.php saludar
+    php toolbox.php saludar Rodrigo
+
+- Segunda función:
+    php toolbox.php sumar 2, 2  /   php toolbox.php sumar 2 2
+
+- Tercera función:
+    php toolbox.php sumarTodos 1 2 3 4
+
+- Cuarta función:
+    php toolbox.php esPrimo 17  /   php toolbox.php esPrimo 14
+
+- Quinta función:
+    php toolbox.php esPrimo 17  /   php toolbox.php esPrimo 14
+
+- Sexta función:
+    php toolbox.php palabraMasLarga "Frase de ejemplo"
+
+- Séptima función:
+    php toolbox.php estadisticas 10 2 8 4
