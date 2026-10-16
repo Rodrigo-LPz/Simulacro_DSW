@@ -152,7 +152,7 @@
             <!-- Muestra el mensaje (el saludo o el error). -->
             <p class="<?= $esError ? "error" : "saludo" ?>"><?= $mensaje ?></p>
 
-            <!-- Enlace para volver al formulario ("../" sube a la carpeta principal, donde está "index.html"). -->
+            <!-- Enlace para volver al formulario. -->
             <a href="../index.html">Volver al formulario</a>
         </main>
         <footer></footer>

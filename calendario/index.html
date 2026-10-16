@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calendario - Buscador de fechas</title>
+
+        <!-- Icon -->
+        <link rel="icon" href="Images/Icono/calendario.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <!-- Formulario que envía el texto por POST a "PHP/procesar.php". -->
+            <form action="PHP/procesar.php" method="post">
+                <label>Texto a analizar:
+                    <!-- <input type="text" name="texto" placeholder="Ejemplo: Ana y Luis se conocieron el 25/12/2023 en Madrid."> -->
+                    <textarea name="texto" rows="4" placeholder="Ejemplo: Ana y Luis se conocieron el 25/12/2023 en Madrid."></textarea>
+                </label>
+                <button type="submit">Analizar</button>
+            </form>
+        </main>
+        <footer></footer>
+    </body>
+</html>
+
+<!-- php -S localhost:8080 -->
+<!-- Él es mi vecino Juan Carlos, vive en Madrid, España, desde el 30/12/2017. -->

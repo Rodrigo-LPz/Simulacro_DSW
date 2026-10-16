@@ -1,0 +1,139 @@
+/* Colores y medidas reutilizables de la página (variables de CSS: se leen con "var(--nombre)"). */
+:root{
+    --colorFondo: #eef2f7;
+    --colorTarjeta: #ffffff;
+    --colorTexto: #1f2937;
+    --colorBorde: #cbd5e1;
+    --colorPrincipal: #2563eb;
+    --colorPrincipalOscuro: #1d4ed8;
+    --colorExito: #15803d;
+    --fondoExito: #dcfce7;
+    --colorError: #b91c1c;
+    --fondoError: #fee2e2;
+    --colorInformacion: #1e40af;
+    --fondoInformacion: #dbeafe;
+    --radio: 12px;
+}
+
+/* Reinicio básico: elimina los márgenes por defecto y hace que el ancho incluya el relleno y el borde. */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Página completa: ocupa todo el alto de la ventana y centra la tarjeta en ambos ejes. */
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorFondo);
+    color: var(--colorTexto);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Tarjeta central (contiene el formulario o los resultados). Algo más ancha que en el ejercicio anterior, porque aquí se escriben frases. */
+main{
+    width: 90%;
+    max-width: 480px;
+    padding: 32px;
+    background-color: var(--colorTarjeta);
+    border-radius: var(--radio);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+
+/* <========== Formulario ==========> */
+
+/* Coloca los elementos del formulario uno debajo de otro, separados entre sí. */
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+/* Etiqueta "Texto a analizar:" encima de la caja de texto. */
+label{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-weight: 600;
+}
+
+/* Caja de texto de varias líneas. */
+textarea{
+    padding: 10px 12px;
+    font-size: 1rem;
+    font-family: inherit;           /* Por defecto, el "textarea" usa una letra distinta (monoespaciada): "inherit" hace que use la misma que el resto de la página. */
+    border: 2px solid var(--colorBorde);
+    border-radius: 8px;
+    outline: none;
+    resize: vertical;               /* El usuario solo puede estirar la caja hacia abajo (no a lo ancho, para no deformar la tarjeta). */
+    transition: border-color 0.2s;
+}
+
+/* Caja de texto seleccionada (cuando el usuario está escribiendo). */
+textarea:focus{ border-color: var(--colorPrincipal); }
+
+/* Botón de envío. */
+button{
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--colorPrincipal);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Botón con el ratón encima. */
+button:hover{ background-color: var(--colorPrincipalOscuro); }
+
+
+/* <========== Resultados (fecha, error e información) ==========> */
+
+/* Estilo común de los tres tipos de mensaje. */
+.exito, .error, .informacion{
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    text-align: left;
+    line-height: 1.6;               /* Separa un poco las líneas (útil en la fecha, que ocupa varias). */
+}
+
+/* Fecha encontrada: verde. */
+.exito{
+    color: var(--colorExito);
+    background-color: var(--fondoExito);
+    font-weight: 600;
+}
+
+/* Error: rojo. */
+.error{
+    color: var(--colorError);
+    background-color: var(--fondoError);
+    font-weight: 600;
+}
+
+/* Información neutra (palabras con mayúscula): azul. */
+.informacion{
+    color: var(--colorInformacion);
+    background-color: var(--fondoInformacion);
+}
+
+/* Enlace "Volver al formulario". */
+a{
+    display: inline-block;
+    margin-top: 4px;
+    color: var(--colorPrincipal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover{ text-decoration: underline; }
