@@ -1,0 +1,142 @@
+/* <========== Variables ==========> */
+
+:root{
+    --colorFondo: #eef1f5;
+    --colorTarjeta: #ffffff;
+    --colorTexto: #1f2937;
+    --colorBorde: #d1d5db;
+    --colorPrincipal: #2563eb;
+    --colorPrincipalHover: #1d4ed8;
+
+    --colorExito: #166534;
+    --fondoExito: #dcfce7;
+    --colorError: #b91c1c;
+    --fondoError: #fee2e2;
+}
+
+
+/* <========== Generales ==========> */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Centra la tarjeta en mitad de la pantalla, tanto en horizontal como en vertical. */
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorFondo);
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--colorTexto);
+}
+
+/* Tarjeta blanca que contiene el formulario o el resultado. */
+main{
+    max-width: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    background-color: var(--colorTarjeta);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+
+/* <========== Formulario ==========> */
+
+/* Cada etiqueta ocupa su propia línea, con el texto encima del campo. */
+label{
+    display: block;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Campos de texto: ocupan todo el ancho y se separan del texto de la etiqueta. */
+input{
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 12px;
+    border: 1px solid var(--colorBorde);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+/* Al seleccionar un campo, el borde se pone del color principal (sin el contorno por defecto del navegador). */
+input:focus{
+    outline: none;
+    border-color: var(--colorPrincipal);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+button{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--colorPrincipal);
+    color: white;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover{ background-color: var(--colorPrincipalHover); }
+
+
+/* <========== Resultado ==========> */
+
+.formularioResultado{
+    max-width: 550px;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+h1{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+/* Cajas de mensaje: comparten forma y se diferencian solo en el color. */
+.exito, .error{
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.exito{
+    background-color: var(--fondoExito);
+    color: var(--colorExito);
+}
+
+.error{
+    background-color: var(--fondoError);
+    color: var(--colorError);
+    font-weight: 600;
+}
+
+/* Enlace "Volver al formulario". */
+a{
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--colorPrincipal);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover{ text-decoration: underline; }

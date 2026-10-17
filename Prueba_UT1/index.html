@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+
+        <!-- Icon -->
+        <link rel="icon" href="Images/Icono/formulario.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="CSS/style.css">
+
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <!-- Formulario que envía el texto por POST a "PHP/procesar.php". -->
+            <!-- <form action="PHP/procesar.php" method="post" novalidate> --> <!-- "novalidate" permite desactivar la validación del formulario por parte del navegador.  -->
+            <form action="PHP/procesar.php" method="post">
+                <label>Nombre de usuario:
+                    <input type="text" name="nombre" minlength="5" maxlength="20" placeholder="Ingrese su nombre de usuario.">
+                </label>
+                <label>Número de teléfono:
+                    <input type="tel" name="telefono" minlength="9" maxlength="15" min="000000000" max="999999999999999" placeholder="Ingrese su número de teléfono.">
+                </label>
+                <label>Correo electrónico / E-mail:
+                    <input type="email" name="email" placeholder="Ingrese su correo electrónico / e-mail.">
+                </label>
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+        <footer></footer>
+    </body>
+</html>
